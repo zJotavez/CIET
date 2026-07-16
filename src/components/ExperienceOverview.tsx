@@ -55,13 +55,13 @@ export default function ExperienceOverview() {
         </div>
 
         {/* Formats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-3 md:gap-8">
           {formats.map((item) => {
             const Icon = item.icon;
             return (
               <div
                 key={item.id}
-                className="bg-white/5 border border-white/10 hover:border-white/20 p-6 sm:p-8 rounded-2xl flex gap-6 items-start hover:-translate-y-0.5 transition-all duration-300 shadow-xl text-left relative overflow-hidden group backdrop-blur-sm"
+                className="bg-white/5 border border-white/10 hover:border-white/20 p-4 sm:p-8 rounded-2xl flex flex-col md:flex-row gap-3 md:gap-6 items-start hover:-translate-y-0.5 transition-all duration-300 shadow-xl text-left relative overflow-hidden group backdrop-blur-sm"
                 id={`format-card-${item.id}`}
               >
                 {/* Visual side accent */}
@@ -72,13 +72,13 @@ export default function ExperienceOverview() {
                 </div>
 
                 <div className="space-y-2">
-                  <span className="text-[9px] font-mono font-bold text-slate-500 uppercase tracking-widest leading-none block">
+                  <span className="text-[8px] sm:text-[9px] font-mono font-bold text-slate-500 uppercase tracking-widest leading-none block">
                     {item.subtitle}
                   </span>
-                  <h3 className="text-lg font-bold text-white font-display">
+                  <h3 className="text-sm md:text-lg font-bold text-white font-display leading-tight">
                     {item.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-400 leading-relaxed text-justify font-light">
+                  <p className="text-[10px] sm:text-sm text-slate-400 leading-relaxed text-justify font-light hidden sm:block">
                     {item.description}
                   </p>
                 </div>

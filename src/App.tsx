@@ -135,38 +135,11 @@ export default function App() {
             </a>
           </div>
 
-          {/* Mobile menu trigger */}
-          <div className="flex md:hidden items-center gap-2">
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 bg-slate-900 text-white rounded-lg cursor-pointer"
-              id="mobile-nav-toggle"
-            >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </button>
-          </div>
+          {/* Mobile menu trigger removed */}
 
         </div>
 
-        {/* Mobile Navigation Dropdown Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden bg-slate-950/95 border-b border-slate-900 p-4 absolute top-full left-0 w-full backdrop-blur-lg flex flex-col gap-4 text-left shadow-2xl animate-fade-in" id="mobile-nav-dropdown">
-            <button onClick={() => handleScrollToSection('about-section')} className="text-sm font-bold text-slate-300 py-1.5">Sobre o Congresso</button>
-            <button onClick={() => handleScrollToSection('speakers-grid-section')} className="text-sm font-bold text-slate-300 py-1.5">Palestrantes</button>
-            <button onClick={() => handleScrollToSection('schedule-section')} className="text-sm font-bold text-slate-300 py-1.5">Programação</button>
-            <button onClick={() => handleScrollToSection('faq-section')} className="text-sm font-bold text-slate-300 py-1.5">Dúvidas Frequentes</button>
-            
-            <a
-              href="https://www.even3.com.br/congresso-internacional-de-educacao-tecnologia-e-desenvolvimento-humano-747666/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-black text-xs tracking-widest uppercase rounded-xl text-center flex justify-center items-center gap-2 shadow-[0_0_20px_rgba(34,211,238,0.4)] border border-cyan-400/30"
-            >
-              <Ticket className="w-4 h-4" />
-              GARANTIR INSCRIÇÃO
-            </a>
-          </div>
-        )}
+        {/* Mobile Navigation Dropdown Menu Removed */}
       </header>
 
       {/* ==================== CORE EVENT LANDING NARRATIVE ==================== */}
@@ -240,6 +213,16 @@ export default function App() {
 
       {/* ==================== PORTAL OVERLAYS ==================== */}
       
+      {/* Floating Action Button (Mobile Only) */}
+      <a
+        href="https://www.even3.com.br/congresso-internacional-de-educacao-tecnologia-e-desenvolvimento-humano-747666/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-[0_0_20px_rgba(34,211,238,0.4)] hover:shadow-[0_0_30px_rgba(34,211,238,0.6)] hover:scale-110 transition-all flex items-center justify-center animate-bounce md:hidden"
+      >
+        <Ticket className="w-6 h-6" />
+      </a>
+
       {/* 1. Modal for detailed speaker bios */}
       {selectedSpeaker && (
         <SpeakerModal

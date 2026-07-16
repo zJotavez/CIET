@@ -82,7 +82,7 @@ export default function SpeakersGrid({ speakers, onOpenSpeakerModal }: SpeakersG
                 <div
                   key={speaker.id}
                   onClick={() => onOpenSpeakerModal(speaker)}
-                  className={`${cardSpan} col-span-12 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-cyan-500/30 p-6 rounded-2xl flex flex-col md:flex-row gap-6 items-center md:items-start text-left cursor-pointer transition-all duration-300 group shadow-lg relative overflow-hidden backdrop-blur-sm`}
+                  className={`${cardSpan} col-span-12 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-cyan-500/30 p-4 sm:p-6 rounded-2xl flex flex-col md:flex-row gap-4 md:gap-6 items-center md:items-start text-left cursor-pointer transition-all duration-300 group shadow-lg relative overflow-hidden backdrop-blur-sm`}
                   id={`grid-card-${speaker.id}`}
                 >
                   {/* Outer delicate glow on hover */}
@@ -112,11 +112,11 @@ export default function SpeakersGrid({ speakers, onOpenSpeakerModal }: SpeakersG
                         </span>
                       )}
                       
-                      <h4 className="text-base md:text-lg font-bold font-display text-white group-hover:text-cyan-400 transition-colors">
+                      <h4 className="text-sm sm:text-base md:text-lg font-bold font-display text-white group-hover:text-cyan-400 transition-colors">
                         {speaker.academicTitle} {speaker.name}
                       </h4>
                       <p className="text-xs font-semibold text-slate-300 line-clamp-1 mt-0.5">{speaker.institution}</p>
-                      <p className="text-xs text-slate-400 line-clamp-2 leading-tight font-light">{speaker.professionalTitle}</p>
+                      <p className="text-[10px] sm:text-xs text-slate-400 line-clamp-2 leading-tight font-light">{speaker.professionalTitle}</p>
                     </div>
 
                     <div className="pt-3 border-t border-white/5 mt-2 flex flex-wrap gap-1">

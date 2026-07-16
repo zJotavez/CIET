@@ -92,7 +92,7 @@ export default function AboutEventVideoSection() {
             </div>
 
             {/* Mini Cards Container */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div className="grid grid-cols-2 sm:grid-cols-2 gap-2 sm:gap-4 pt-2">
               {/* Mini Card 1 - Global */}
               <motion.div 
                 initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}
@@ -101,8 +101,8 @@ export default function AboutEventVideoSection() {
                 <div className="absolute inset-0 bg-[url('/global_card_bg.jpg')] bg-cover bg-center opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/80 to-transparent"></div>
                 <div className="relative z-10">
-                  <h4 className="text-white font-bold text-lg mb-1 drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">Escala Global</h4>
-                  <p className="text-slate-300 text-sm font-light drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">Especialistas e líderes de todo o mundo.</p>
+                  <h4 className="text-white font-bold text-sm sm:text-lg mb-1 drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">Escala Global</h4>
+                  <p className="text-slate-300 text-[10px] sm:text-sm font-light drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] leading-tight">Especialistas e líderes de todo o mundo.</p>
                 </div>
               </motion.div>
               
@@ -114,8 +114,8 @@ export default function AboutEventVideoSection() {
                 <div className="absolute inset-0 bg-[url('/innovation_card_bg.jpg')] bg-cover bg-center opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/80 to-transparent"></div>
                 <div className="relative z-10">
-                  <h4 className="text-white font-bold text-lg mb-1 drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">Foco em Inovação</h4>
-                  <p className="text-slate-300 text-sm font-light drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">O futuro do conhecimento, ciência e ética.</p>
+                  <h4 className="text-white font-bold text-sm sm:text-lg mb-1 drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">Foco em Inovação</h4>
+                  <p className="text-slate-300 text-[10px] sm:text-sm font-light drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] leading-tight">O futuro do conhecimento, ciência e ética.</p>
                 </div>
               </motion.div>
             </div>
@@ -151,7 +151,7 @@ export default function AboutEventVideoSection() {
               whileInView={{ opacity: 1, rotateY: 0, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 1, type: "spring", bounce: 0.5 }}
-              className="relative w-full max-w-[340px] sm:max-w-[420px] aspect-[9/16] rounded-[3.5rem] overflow-hidden bg-black border-[10px] border-slate-900 shadow-[0_50px_100px_-20px_rgba(0,0,0,1),_0_0_0_12px_rgba(255,255,255,0.02),_0_20px_60px_rgba(6,182,212,0.3)] group hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_60px_120px_-20px_rgba(0,0,0,1),_0_0_0_12px_rgba(255,255,255,0.03),_0_30px_70px_rgba(6,182,212,0.5)] transition-all duration-700 ease-out z-20"
+              className="relative w-full max-w-[280px] sm:max-w-[420px] aspect-[9/16] rounded-[3.5rem] overflow-hidden bg-black border-[10px] border-slate-900 shadow-[0_50px_100px_-20px_rgba(0,0,0,1),_0_0_0_12px_rgba(255,255,255,0.02),_0_20px_60px_rgba(6,182,212,0.3)] group hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_60px_120px_-20px_rgba(0,0,0,1),_0_0_0_12px_rgba(255,255,255,0.03),_0_30px_70px_rgba(6,182,212,0.5)] transition-all duration-700 ease-out z-20"
             >
               {/* Phone Notch/Dynamic Island mockup */}
               <div className="absolute top-0 inset-x-0 flex justify-center z-20 pt-3">
@@ -171,7 +171,7 @@ export default function AboutEventVideoSection() {
                   loop 
                   muted={isMuted} 
                   playsInline 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain sm:object-cover"
                 >
                   <source src="/Video atualizado.mp4" type="video/mp4" />
                 </video>

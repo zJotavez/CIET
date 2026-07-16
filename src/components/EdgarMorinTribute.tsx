@@ -115,8 +115,8 @@ export default function EdgarMorinTribute({ content }: MorinTributeProps) {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
             
-            {/* Left Column (was Right before): Details Card with Background Image */}
-            <div className="lg:col-span-7 border border-white/10 rounded-2xl flex flex-col justify-between shadow-2xl relative overflow-hidden text-left backdrop-blur-sm order-2 lg:order-1 transition-all duration-500 group">
+            {/* Right Column (was Left before): Details Card with Background Image */}
+            <div className="lg:col-span-7 border border-white/10 rounded-2xl flex flex-col justify-between shadow-2xl relative overflow-hidden text-left backdrop-blur-sm order-2 transition-all duration-500 group">
               
               {/* Background Image of the Card */}
               <AnimatePresence mode="wait">
@@ -171,8 +171,8 @@ export default function EdgarMorinTribute({ content }: MorinTributeProps) {
               </div>
             </div>
 
-            {/* Right Column (was Left before): Buttons (os 7 passos) */}
-            <div className="lg:col-span-5 flex flex-col gap-2 order-1 lg:order-2">
+            {/* Left Column: Buttons (os 7 passos) */}
+            <div className="lg:col-span-5 flex flex-row sm:flex-col flex-wrap justify-center sm:justify-start gap-2 order-1">
               {content.saberes.map((saber, idx) => {
                 const isActive = activeSaber === saber.id;
                 const c = SABER_COLORS[idx % SABER_COLORS.length];
@@ -181,17 +181,17 @@ export default function EdgarMorinTribute({ content }: MorinTributeProps) {
                   <button
                     key={saber.id}
                     onClick={() => setActiveSaber(saber.id)}
-                    className={`flex items-center gap-4 p-3 rounded-xl border text-left transition-all duration-300 cursor-pointer ${
+                    className={`flex items-center justify-center sm:justify-start gap-2 sm:gap-4 p-2 sm:p-3 rounded-xl border text-left transition-all duration-300 cursor-pointer flex-1 sm:flex-none min-w-[40px] ${
                       isActive
                         ? `${c.activeBg} ${c.activeBorder} shadow-md ${c.shadow}`
                         : "bg-transparent border-transparent hover:border-white/10 hover:bg-white/5"
                     }`}
                     id={`saber-selector-${saber.id}`}
                   >
-                    <span className={`text-[10px] font-mono font-bold px-2 py-1 rounded-lg transition-colors ${isActive ? c.badge : 'bg-white/5 text-slate-500 border border-white/5'}`}>
+                    <span className={`text-[12px] sm:text-[10px] font-mono font-bold px-2 py-1 rounded-lg transition-colors ${isActive ? c.badge : 'bg-white/5 text-slate-500 border border-white/5'}`}>
                       {saber.number}
                     </span>
-                    <h5 className={`text-xs sm:text-sm font-semibold leading-tight font-display transition-colors ${isActive ? 'text-white' : 'text-slate-400'}`}>
+                    <h5 className={`hidden sm:block text-xs sm:text-sm font-semibold leading-tight font-display transition-colors ${isActive ? 'text-white' : 'text-slate-400'}`}>
                       {saber.title}
                     </h5>
                   </button>
