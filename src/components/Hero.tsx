@@ -13,7 +13,7 @@ interface HeroProps {
 export default function Hero({ config, onScrollToSection }: HeroProps) {
 
   return (
-    <section className="relative min-h-screen bg-[#020617] flex flex-col justify-center overflow-hidden pt-28 pb-12 px-4 sm:px-6 lg:px-8" id="hero-section">
+    <section className="relative aspect-video sm:aspect-auto sm:min-h-screen bg-[#020617] flex flex-col justify-center overflow-hidden sm:pt-28 sm:pb-12 px-0 sm:px-6 lg:px-8" id="hero-section">
       {/* Background Video */}
       <div className="absolute inset-0 z-0 bg-black">
         <video 
@@ -41,7 +41,7 @@ export default function Hero({ config, onScrollToSection }: HeroProps) {
       </div>
 
       {/* Bounce scroll down button */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1 opacity-60 hover:opacity-100 transition-opacity">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center gap-1 opacity-60 hover:opacity-100 transition-opacity">
         <button
           onClick={() => onScrollToSection('authority-bar')}
           className="p-1 rounded-full hover:bg-slate-900 border border-slate-900/50 transition-all text-slate-400 hover:text-white cursor-pointer"
