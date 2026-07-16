@@ -85,7 +85,7 @@ export default function EdgarMorinTribute({ content }: MorinTributeProps) {
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative group">
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-tr from-purple-500 to-indigo-500 opacity-20 group-hover:opacity-40 transition-opacity blur-md" />
-              <div className="relative w-72 h-72 sm:w-80 sm:h-80 rounded-2xl overflow-hidden border border-white/10 bg-[#020617] shadow-2xl">
+              <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-2xl overflow-hidden border border-white/10 bg-[#020617] shadow-2xl">
                 {/* Imagem de Inteligência Artificial / Cyber-Cérebro */}
                 <img
                   src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=600&h=600"

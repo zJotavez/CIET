@@ -89,7 +89,7 @@ export default function SpeakersGrid({ speakers, onOpenSpeakerModal }: SpeakersG
                   <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/0 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
 
                   {/* Photo representation */}
-                  <div className="relative shrink-0 w-24 h-24 md:w-28 md:h-28">
+                  <div className="relative shrink-0 w-20 h-20 md:w-28 md:h-28">
                     <div className="absolute -inset-0.5 rounded-full bg-gradient-to-tr from-cyan-400 to-blue-500 opacity-20 group-hover:opacity-50 transition-opacity blur-sm"></div>
                     <img
                       src={speaker.photoUrl}

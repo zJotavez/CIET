@@ -96,7 +96,7 @@ export default function AboutEventVideoSection() {
               {/* Mini Card 1 - Global */}
               <motion.div 
                 initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}
-                className="relative overflow-hidden rounded-2xl p-6 shadow-xl hover:-translate-y-1 hover:shadow-cyan-500/20 transition-all duration-300 group border border-white/10 min-h-[140px] flex flex-col justify-end"
+                className="relative overflow-hidden rounded-2xl p-4 sm:p-6 shadow-xl hover:-translate-y-1 hover:shadow-cyan-500/20 transition-all duration-300 group border border-white/10 min-h-[100px] sm:min-h-[140px] flex flex-col justify-end"
               >
                 <div className="absolute inset-0 bg-[url('/global_card_bg.jpg')] bg-cover bg-center opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/80 to-transparent"></div>
@@ -109,7 +109,7 @@ export default function AboutEventVideoSection() {
               {/* Mini Card 2 - Inovação */}
               <motion.div 
                 initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}
-                className="relative overflow-hidden rounded-2xl p-6 shadow-xl hover:-translate-y-1 hover:shadow-blue-500/20 transition-all duration-300 group border border-white/10 min-h-[140px] flex flex-col justify-end"
+                className="relative overflow-hidden rounded-2xl p-4 sm:p-6 shadow-xl hover:-translate-y-1 hover:shadow-blue-500/20 transition-all duration-300 group border border-white/10 min-h-[100px] sm:min-h-[140px] flex flex-col justify-end"
               >
                 <div className="absolute inset-0 bg-[url('/innovation_card_bg.jpg')] bg-cover bg-center opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/80 to-transparent"></div>

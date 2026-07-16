@@ -71,7 +71,7 @@ export default function InscricaoCard({ config }: InscricaoCardProps) {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch max-w-3xl mx-auto">
           
           {/* Main Checkout Ticket */}
-          <div className="md:col-span-12 bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-10 text-left flex flex-col justify-between shadow-2xl relative overflow-hidden backdrop-blur-md">
+          <div className="md:col-span-12 bg-white/5 border border-white/10 rounded-3xl p-5 sm:p-10 text-left flex flex-col justify-between shadow-2xl relative overflow-hidden backdrop-blur-md">
             {/* Top horizontal gradient line */}
             <div className="absolute top-0 inset-x-0 h-[3px] bg-gradient-to-r from-blue-600 via-cyan-400 to-indigo-600" />
             
@@ -83,7 +83,7 @@ export default function InscricaoCard({ config }: InscricaoCardProps) {
                   <span className="text-[9px] font-mono font-bold uppercase tracking-widest text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 px-2.5 py-1 rounded-lg">
                     LOTE ATUAL PROMOCIONAL
                   </span>
-                  <h4 className="text-xl sm:text-2xl font-bold font-display text-white mt-2 leading-none">Inscrição Integral CIETDH 2026</h4>
+                  <h4 className="text-lg sm:text-2xl font-bold font-display text-white mt-2 leading-none">Inscrição Integral CIETDH 2026</h4>
                   <p className="text-xs text-slate-400 mt-1 font-light">Garante acesso completo a todas as noites, gravações e certificação oficial.</p>
                 </div>
                 <div className="text-left sm:text-right">
@@ -91,7 +91,7 @@ export default function InscricaoCard({ config }: InscricaoCardProps) {
                   {config.originalPrice > config.registrationPrice && (
                     <p className="text-xs text-slate-500 line-through">R$ {config.originalPrice.toFixed(2).replace('.', ',')}</p>
                   )}
-                  <p className="text-2xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-cyan-300 font-display">
+                  <p className="text-xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-cyan-300 font-display">
                     R$ {config.registrationPrice.toFixed(2).replace('.', ',')}
                   </p>
                   <p className="text-[10px] text-slate-500 font-mono tracking-wider">Taxa única — sem mensalidades</p>

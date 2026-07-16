@@ -45,7 +45,7 @@ export default function FeaturedSpeakerSpotlight({ type, speaker, allSpeakers = 
               <div className="relative group">
                 <div className="absolute -inset-1 rounded-2xl bg-gradient-to-tr from-blue-600 to-cyan-400 opacity-20 group-hover:opacity-40 transition-opacity blur-md" />
                 
-                <div className="relative w-72 h-88 sm:w-80 sm:h-96 rounded-2xl overflow-hidden border border-white/10 bg-[#020617] shadow-2xl">
+                <div className="relative w-64 h-80 sm:w-80 sm:h-96 rounded-2xl overflow-hidden border border-white/10 bg-[#020617] shadow-2xl">
                   {speaker.videoUrl ? (
                     <div 
                       onClick={toggleMute}
@@ -79,7 +79,7 @@ export default function FeaturedSpeakerSpotlight({ type, speaker, allSpeakers = 
                   )}
                   
                   {/* Glass Card Details Overlay */}
-                  <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-[#020617] via-[#020617]/80 to-transparent pt-12 text-left">
+                  <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-[#020617] via-[#020617]/80 to-transparent pt-12 text-left pointer-events-none">
                     <p className="text-[9px] font-bold text-cyan-400 tracking-widest uppercase font-mono">{speaker.country}</p>
                     <h4 className="text-lg font-bold text-white mt-1 leading-tight font-display">{speaker.academicTitle} {speaker.name}</h4>
                     <p className="text-xs text-slate-300 mt-1 line-clamp-1 font-light">{speaker.institution}</p>
@@ -231,7 +231,7 @@ export default function FeaturedSpeakerSpotlight({ type, speaker, allSpeakers = 
               {/* Outer neon border glow */}
               <div className="absolute -inset-1 rounded-3xl bg-gradient-to-tr from-cyan-500 via-blue-500 to-indigo-600 opacity-20 group-hover:opacity-40 transition-opacity blur-md" />
               
-              <div className="relative w-72 h-96 sm:w-80 sm:h-104 rounded-3xl overflow-hidden border border-white/10 bg-[#020617]">
+              <div className="relative w-64 h-80 sm:w-80 sm:h-104 rounded-3xl overflow-hidden border border-white/10 bg-[#020617]">
                 {speaker.videoUrl ? (
                   <div 
                     onClick={toggleMute}
@@ -265,7 +265,7 @@ export default function FeaturedSpeakerSpotlight({ type, speaker, allSpeakers = 
                 )}
                 
                 {/* Visual filter overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#020617]/80 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#020617]/80 via-transparent to-transparent pointer-events-none" />
               </div>
             </div>
           </div>
